@@ -6,14 +6,14 @@ import { TiMessages } from "react-icons/ti";
 const DataTable = ({brands}) => {
  
     return (
-        <div>
+        <div className="">
             <DataTableNav></DataTableNav>
            <div>
            <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
     <thead>
-      <tr>
+      <tr className="">
          <th></th>
         <th>Brand</th>
         <th>Description</th>
@@ -24,7 +24,7 @@ const DataTable = ({brands}) => {
         <th>+</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="">
       {/* row 1 */}
       {
         brands.map(brand=>
@@ -35,9 +35,9 @@ const DataTable = ({brands}) => {
           </label>
         </th>
         <td>
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center justify-between">
             <div className="gap-1 flex items-center">
-              <div className="mask mask-squircle w-6 h-6 ">
+              <div className="mask mask-squircle max-w-6 max-h-6 ">
                 <img src={brand.image} alt="Avatar" />
               </div>
               <div className="font-bold">{brand.name}</div>
@@ -53,35 +53,36 @@ const DataTable = ({brands}) => {
           </div>
         </td>
         <td>
-          <h2 className="font-bold">{brand.description.slice(0,30)}...</h2>
+          <h2 className="font-bold">{brand.description.slice(0,20)}...</h2>
         </td>
         <td>
         <div className="avatar-group -space-x-6 rtl:space-x-reverse">
   <div className="avatar">
-    <div className="w-12">
+    <div className="max-w-12">
       <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="avatar">
-    <div className="w-11">
+    <div className="max-w-11">
       <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
+ 
   <div className="avatar">
-    <div className="w-11">
+    <div className="max-w-11">
       <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="avatar placeholder">
-    <div className="w-10 bg-neutral text-neutral-content">
+    <div className="max-w-10 bg-neutral text-neutral-content">
       <span>+{brand.members}</span>
     </div>
   </div>
 </div>
         </td>
-        <td className="flex gap-1">
+        <td className="flex gap-1 ">
           {brand.categories.map((category,index)=><button className="btn btn-secondary btn-xs" key={index}><span className="" >{category}</span></button>)}
-        </td>
+        </td> 
        
        
         <td className=""> 
@@ -102,11 +103,11 @@ const DataTable = ({brands}) => {
     <tfoot>
       <tr>
         <th></th>
-        <th className="text-end font-bold text-xl ">+10count</th>
-        <th className="text-end font-bold text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold text-xl ">+ Add Calculation</th>
+        <th className="text-end font-bold md:text-xl ">+10count</th>
+        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
+        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
+        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
+        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
        
         <th></th>
       </tr>
