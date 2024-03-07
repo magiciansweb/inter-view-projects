@@ -1,14 +1,25 @@
 import { FaCamera,  FaFolder,  FaShopify, FaVideo } from "react-icons/fa6";
 import { BsPeople } from "react-icons/bs";
-import { MdDraw } from "react-icons/md";
+import { MdDraw, MdHome } from "react-icons/md";
 import { MdDeveloperMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
     const navlinks=<>
    <div className="flex  flex-col">
+    <li><Link to='/'> <div className="flex justify-between shadow bg-base-100 rounded-lg  w-64 px-1 items-center">
+  <div className="flex items-center gap-3">
+  <div className="text-sm  bg-blue-500 rounded-lg"> <MdHome></MdHome></div>
+    <div className="text-justify">
+      
+        <h1 className="text-sm ">Home</h1>
+    </div>
+  </div>
+   
+    <button className="btn-xs shadow bg-base-200 rounded-lg">K+1</button>     
+   </div></Link></li>
      
-   <li><Link>
+   <li><Link to='/design'>
     <div className="flex justify-between shadow bg-base-100 rounded-lg  w-64 px-1 items-center">
   <div className="flex items-center gap-3">
   <div className="text-sm  bg-blue-500 rounded-lg"> <MdDraw></MdDraw></div>
@@ -21,7 +32,7 @@ const SideBar = () => {
     <button className="btn-xs shadow bg-base-200 rounded-lg">K+1</button>     
    </div></Link></li>
         <li>
-        <Link>
+        <Link to='/marketing'>
     <div className="flex justify-between shadow bg-base-100 rounded-lg  w-64 px-2 items-center">
   <div className="flex items-center gap-3">
   <div className="text-sm  bg-blue-500 rounded-lg"><FaShopify></FaShopify></div>
@@ -35,7 +46,7 @@ const SideBar = () => {
    </div></Link>
         </li>
         <li>
-        <Link>
+        <Link to='/development'>
     <div className="flex justify-between shadow bg-base-100 rounded-lg  w-64 px-2 items-center">
   <div className="flex items-center gap-3">
   <div className="text-sm  bg-blue-500 rounded-lg"><MdDeveloperMode></MdDeveloperMode> </div>
@@ -49,7 +60,7 @@ const SideBar = () => {
    </div></Link>
         </li>
         <li>
-        <Link>
+        <Link to='/createteam'>
   
   <div className="flex gap-2 shadow bg-base-100 rounded-lg  w-64 px-2 items-center">
   <div className="text-sm  rounded-lg"><FaCamera></FaCamera> </div>
@@ -61,7 +72,7 @@ const SideBar = () => {
    </div></Link>
         </li>
         <li>
- <Link>
+
  <div className="flex justify-between shadow  rounded-lg  w-64 px-2 items-center">
  
  <div className="text-justify">
@@ -70,7 +81,7 @@ const SideBar = () => {
  </div>
  <div className="text-sm  rounded-lg">+</div>     
 </div>
- </Link>
+
         </li>
         
         <li>
@@ -84,7 +95,7 @@ const SideBar = () => {
   </div>
   <div className="collapse-content"> 
    <ul>
-    <li><Link>Roadmap</Link></li>
+    <li><Link to='/roadmap'>Roadmap</Link></li>
     <li><Link>Feedback</Link></li>
     <li><Link>Performance</Link></li>
     <li><Link>Team</Link></li>
@@ -102,40 +113,14 @@ const SideBar = () => {
   <div className="collapse-title text-sm  flex items-center gap-2">
    <FaFolder></FaFolder> <h2>Solves</h2>
    </div>
-  <div className="collapse-content"> 
-  <ul>
-    <li><Link>Roadmap</Link></li>
-    <li><Link>Feedback</Link></li>
-    <li><Link>Performance</Link></li>
-    <li><Link>Team</Link></li>
-    <li><Link>Analytics</Link></li>
-    <li><Link><span className="inline-flex gap-2 items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-        Add new tabs
-      </span></Link></li>
-    
-   </ul>
-  </div>
+  
 </div>
 <div className="collapse collapse-plus ">
   <input type="radio" name="my-accordion-3" /> 
   <div className="collapse-title text-sm  flex items-center gap-2">
   <FaFolder></FaFolder> <h2>Design</h2>
   </div>
-  <div className="collapse-content"> 
-  <ul>
-    <li><Link>Roadmap</Link></li>
-    <li><Link>Feedback</Link></li>
-    <li><Link>Performance</Link></li>
-    <li><Link>Team</Link></li>
-    <li><Link>Analytics</Link></li>
-   <li><Link>  <span className="inline-flex gap-2 items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-        Add new tabs
-      </span></Link></li>
-    
-   </ul>
-  </div>
+  
 </div>
 
 <div className="collapse ">

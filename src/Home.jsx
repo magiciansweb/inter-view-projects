@@ -26,7 +26,7 @@ const Home = () => {
     }
     
     return (
-        <div className="shadow bg-base-100 rounded-lg max-w-md   mx-auto ">
+        <div className="shadow bg-base-100 rounded-lg max-w-4xl   mx-auto ">
            <Navbar brands={brands} handleSearchItem={handleSearchItem} setData={setData}>
             </Navbar> 
             <DataTable brands={brands}></DataTable>

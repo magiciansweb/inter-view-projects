@@ -103,11 +103,11 @@ const DataTable = ({brands}) => {
     <tfoot>
       <tr>
         <th></th>
-        <th className="text-end font-bold md:text-xl ">+10count</th>
-        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
-        <th className="text-end font-bold md:text-xl ">+ Add Calculation</th>
+        <th className="text-end font-bold  ">+10count</th>
+        <th className="text-end font-bold  ">+ Add Calculation</th>
+        <th className="text-end font-bold  ">+ Add Calculation</th>
+        <th className="text-end font-bold  ">+ Add Calculation</th>
+        <th className="text-end font-bold  ">+ Add Calculation</th>
        
         <th></th>
       </tr>
