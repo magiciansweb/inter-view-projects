@@ -1,5 +1,6 @@
 
-import './App.css'
+import { Outlet } from 'react-router-dom'
+import SideBar from './SideBar'
 
 function App() {
  
@@ -7,7 +8,14 @@ function App() {
   return (
     <>
       
-      <h1>Vite React</h1>
+      <div className='flex flex-col lg:flex-row '>
+        <div className='ml-0'>
+          <SideBar></SideBar>
+        </div>
+        <div className=''>
+          <Outlet></Outlet>
+        </div>
+      </div>
       
     </>
   )
